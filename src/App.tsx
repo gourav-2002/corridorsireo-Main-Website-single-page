@@ -1128,6 +1128,8 @@ export default function App() {
       src="/ireo-hero.webp"
       alt="Luxury High Rise"
       className="w-full h-full object-cover"
+      fetchPriority="high"
+      decoding="async"
     />
     <div className="absolute inset-0 bg-black/50"></div>
   </div>
@@ -1157,7 +1159,7 @@ export default function App() {
 </div>
 
       {/* Sub */}
-      <p className="text-[14px] text-gray-600">
+      <p className="text-[15px] text-gray-600">
         Discover Ireo Corridors Sector 67A Gurgaon, a thoughtfully planned township offering ready to move apartments in Gurgaon. Located on Golf Course Extension Road, this premium project features spacious 2 BHK and 3 BHK homes, modern amenities, and excellent resale value.
       </p>
 
@@ -1219,7 +1221,7 @@ export default function App() {
             Premium 2 & 3 BHK Apartments in Sector 67A Gurgaon
           </p>
 
-          <p className="text-white/90 max-w-xl">
+          <p className="text-white/90 max-w-xl text-lg leading-relaxed">
             Discover Ireo Corridors Sector 67A Gurgaon, a thoughtfully planned township offering ready to move apartments in Gurgaon. Located on Golf Course Extension Road, this premium project features spacious 2 BHK and 3 BHK homes, modern amenities, and excellent resale value.
           </p>
 
@@ -2022,8 +2024,10 @@ export default function App() {
 
                 {/* IMAGE */}
                 <img
-                  src="/ireo-corridors-master-plan.webp"   // 👈 apni image ka path yaha daal
+                  src="/ireo-corridors-master-plan.webp"
                   alt="Ireo The Corridors Master Plan"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain rounded-[4px]"
                 />
 
@@ -2183,6 +2187,8 @@ export default function App() {
               <img
                 src="/township-around-life.webp"
                 alt="Luxury Living"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -2897,6 +2903,8 @@ export default function App() {
               <img
                 src="/2-acre-clubhouse.webp"
                 alt="Clubhouse at Ireo The Corridors"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
@@ -3306,6 +3314,8 @@ export default function App() {
                 <img
                   src="/located-seamlessly-connected.webp"
                   alt="Ireo The Corridors Location Map"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -3925,7 +3935,7 @@ export default function App() {
                 className="bg-[#FFFFFF] rounded-[8px] overflow-hidden border border-[#C8833A]/10 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={project.img} alt={project.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <img src={project.img} alt={project.name} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <h4 className="font-serif text-[#0A0A0A] text-[18px] mb-1">{project.name}</h4>
@@ -4713,6 +4723,8 @@ export default function App() {
                 <img
                   src="/discuss-your-dream-home.webp"
                   alt="Ireo Corridors"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
