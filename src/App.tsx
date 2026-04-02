@@ -968,7 +968,7 @@ export default function App() {
               <span className="mx-1 lg:mx-2 text-accent-copper text-[18px] lg:text-[20px] font-light leading-none">|</span>
               <span className="text-accent-copper text-[18px] mr-6 lg:text-[20px] font-light leading-none tracking-wide">ireo</span>
             </div>
-            <span className="text-[8px] lg:text-[9px] text-text-secondary uppercase tracking-[1.5px] mt-1 font-medium group-hover:text-accent-copper transition-colors whitespace-nowrap">Presented by Do Bigha Zamin</span>
+            <span className="text-[8px] lg:text-[9px] text-white/70 uppercase tracking-[1.5px] mt-1 font-medium group-hover:text-accent-copper transition-colors whitespace-nowrap">Presented by Do Bigha Zamin</span>
           </a>
 
           {/* CENTER ZONE: Navigation Links (Desktop Only) */}
@@ -1087,7 +1087,7 @@ export default function App() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
                         onClick={() => scrollToSection(link.id)}
-                        className={`text-[16px] uppercase tracking-[3px] font-bold text-left py-2 border-b border-white/5 ${activeSection === link.id ? 'text-accent-copper' : 'text-ivory'
+                        className={`text-[16px] uppercase tracking-[3px] font-bold text-left py-2 border-b border-white/5 ${activeSection === link.id ? 'text-accent-copper' : 'text-white'
                           }`}
                       >
                         {link.name}
@@ -1098,7 +1098,7 @@ export default function App() {
                   <div className="flex flex-col gap-6 pt-6">
                     <div className="flex flex-col gap-2">
                       <span className="text-text-secondary text-[10px] uppercase tracking-[2px]">Direct Contact</span>
-                      <a href="tel:+919899888015" className="text-ivory text-[18px] font-bold tracking-wider flex items-center gap-3">
+                      <a href="tel:+919899888015" className="text-white text-[18px] font-bold tracking-wider flex items-center gap-3">
                         <Phone size={18} className="text-accent-copper" />
                         +91 9899 888 015
                       </a>
@@ -1119,100 +1119,154 @@ export default function App() {
       </nav>
 
       {/* SECTION 2 — HERO */}
-      <section className="relative h-screen w-full overflow-hidden flex flex-col">
-        {/* Cinematic Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/ireo-hero.webp"
-            alt="Luxury High Rise"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-bg-primary/55"></div>
-        </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex-grow flex items-center pt-24">
-  <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
-    
-    {/* Left Column */}
-    <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-      className="flex flex-col gap-6"
-    >
-      
-      <span className="section-label">
-        IREO CORRIDORS · SECTOR 67A GURGAON · GOLF COURSE EXTENSION ROAD
-      </span>
+      <section className="relative w-full overflow-hidden flex flex-col">
 
-      <h1 className="font-serif text-5xl md:text-7xl lg:text-[50px] text-text-accent leading-[1.1] font-bold">
-        Ireo Corridors Gurgaon
-        Ready to Move Luxury Apartments
-      </h1>
+  {/* Background */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/ireo-hero.webp"
+      alt="Luxury High Rise"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/50"></div>
+  </div>
 
-      <p className="font-serif italic text-xl md:text-2xl text-accent-gold">
-        Premium 2 & 3 BHK Apartments in Sector 67A Gurgaon
+  {/* ================= MOBILE HERO ================= */}
+  <div className="relative z-10 block lg:hidden px-4 pt-24 pb-10 bg-[#f8fafc]">
+
+    <div className="flex flex-col gap-5">
+
+      {/* Label */}
+      <p className="text-[10px] tracking-[2px] uppercase text-green-700 bg-green-100 w-fit px-3 py-1 rounded-full font-medium mt-4">
+        IREO CORRIDORS · SECTOR 67A · GURGAON
       </p>
 
-      <p className="text-text-accent text-base md:text-lg leading-relaxed max-w-xl">
+      {/* Heading */}
+      <h1 className="text-[26px] leading-[1.2] font-bold text-gray-900">
+        Ireo Corridors Gurgaon Ready to Move Luxury Apartments
+      </h1>
+
+      {/* Image */}
+<div className="w-full mt-2 rounded-xl border border-accent-copper p-[4px]">
+  <img
+    src="/ireo-hero.webp"
+    alt="Ireo Corridors Gurgaon"
+    className="w-full h-[200px] object-cover rounded-lg"
+  />
+</div>
+
+      {/* Sub */}
+      <p className="text-[14px] text-gray-600">
         Discover Ireo Corridors Sector 67A Gurgaon, a thoughtfully planned township offering ready to move apartments in Gurgaon. Located on Golf Course Extension Road, this premium project features spacious 2 BHK and 3 BHK homes, modern amenities, and excellent resale value.
       </p>
 
-      <p className="text-text-secondary text-sm md:text-base leading-relaxed max-w-xl">
-        37.5 acres · 27 towers · 10 acres of greens · 2-acre clubhouse · Low-density living
-      </p>
+      {/* Badges */}
+      <div className="flex flex-wrap gap-2">
+        {['Ready to Move', 'OC Received', '37.5 Acres', 'HRERA Verified'].map((tag) => (
+          <span
+            key={tag}
+            className="text-[12px] text-white/80 bg-accent-copper border border-gray-200 px-3 py-1 rounded-full shadow-sm"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-      <div className="flex flex-wrap gap-4 mt-4">
-        <button onClick={() => scrollToSection('site-visit')} className="btn-copper rounded-[2px]">
-          Schedule a Site Visit
-        </button>
-        <button onClick={() => scrollToSection('brochure')} className="btn-outline-copper rounded-[2px]">
+      {/* Form Card */}
+      <div className="rounded-2xl p-4">
+        <HeroEnquiryForm />
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col gap-3">
+        <button
+  onClick={() => scrollToSection('site-visit')}
+  className="btn-copper w-full rounded-[2px] mt-2 py-4 flex items-center justify-center gap-2"
+>
+  Schedule Site Visit →
+</button>
+
+        <button
+          onClick={() => scrollToSection('brochure')}
+          className="w-full border border-gray-300 text-gray-800 py-4 rounded-xl text-[14px] font-semibold bg-white"
+        >
           Download Brochure
         </button>
       </div>
 
-      <div className="mt-2 mb-8 inline-flex items-center gap-3 border border-accent-copper/30 bg-bg-secondary/50 px-4 py-2 rounded-[2px] w-fit">
-        <CheckCircle2 size={14} className="text-accent-copper" />
-        <span className="text-[10px] uppercase tracking-[1.5px] text-text-secondary">
-          Authorised Channel Partner · Do Bigha Zamin · HRERA 378 of 2017
-        </span>
-      </div>
-    </motion.div>
-
-    {/* Right Column - Enquiry Card */}
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
-      className="relative"
-    >
-      <HeroEnquiryForm />
-    </motion.div>
-
+    </div>
   </div>
-</div>
 
-        {/* Bottom Stats Bar */}
-        <div className="relative z-10 bg-bg-secondary border-t border-accent-copper/30 mt-auto">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-accent-copper/20">
-            {[
-              { value: '₹2.40 Cr*', label: 'Starting Price' },
-              { value: 'Ready to Move', label: 'Status' },
-              { value: '37.5 Acres', label: 'Total Area' },
-              { value: '27 Towers', label: 'Development' },
-              { value: '₹19,000/sq.ft', label: 'Avg. Price' },
-              { value: 'HRERA Verified', label: 'Compliance' }
-            ].map((stat, idx) => (
-              <div key={idx} className="px-6 py-6 flex flex-col items-center justify-center text-center">
-                <span className="text-accent-gold font-medium text-sm md:text-base tracking-wide mb-1">{stat.value}</span>
-                <span className="text-text-secondary text-[9px] uppercase tracking-[2px]">{stat.label}</span>
-              </div>
-            ))}
+  {/* ================= DESKTOP HERO ================= */}
+  <div className="relative z-10 hidden lg:flex flex-grow items-center pt-24">
+
+    <div className="max-w-7xl mx-auto px-6 w-full">
+      <div className="grid grid-cols-[60%_40%] gap-12 items-center">
+
+        {/* LEFT */}
+        <div className="flex flex-col gap-6">
+          <span className="section-label">
+            IREO CORRIDORS · SECTOR 67A GURGAON · GOLF COURSE EXTENSION ROAD
+          </span>
+
+          <h1 className="font-serif text-[50px] text-white leading-[1.1] font-bold">
+            Ireo Corridors Gurgaon
+            Ready to Move Luxury Apartments
+          </h1>
+
+          <p className="font-serif italic text-xl text-yellow-400">
+            Premium 2 & 3 BHK Apartments in Sector 67A Gurgaon
+          </p>
+
+          <p className="text-white/90 max-w-xl">
+            Discover Ireo Corridors Sector 67A Gurgaon, a thoughtfully planned township offering ready to move apartments in Gurgaon. Located on Golf Course Extension Road, this premium project features spacious 2 BHK and 3 BHK homes, modern amenities, and excellent resale value.
+          </p>
+
+          <div className="flex gap-4 mt-4">
+            <button onClick={() => scrollToSection('site-visit')} className="btn-copper">
+              Schedule a Site Visit
+            </button>
+
+            <button onClick={() => scrollToSection('brochure')} className="btn-outline-copper">
+              Download Brochure
+            </button>
+          </div>
+
+        </div>
+
+        {/* RIGHT FORM */}
+        <div>
+          <HeroEnquiryForm />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {/* ================= BOTTOM BAR ================= */}
+  <div className="relative z-10 bg-black/80 border-t border-white/20 mt-auto hidden lg:block">
+    <div className="max-w-7xl mx-auto grid grid-cols-6 divide-x divide-white/20">
+      {[
+        { value: '₹2.40 Cr*', label: 'Starting Price' },
+        { value: 'Ready to Move', label: 'Status' },
+        { value: '37.5 Acres', label: 'Total Area' },
+        { value: '27 Towers', label: 'Development' },
+        { value: '₹19,000/sq.ft', label: 'Avg. Price' },
+        { value: 'HRERA Verified', label: 'Compliance' }
+      ].map((stat, idx) => (
+        <div key={idx} className="px-6 py-6 text-center">
+          <span className="text-yellow-400 text-sm">{stat.value}</span>
+          <div className="text-white/70 text-[10px] uppercase tracking-[2px]">
+            {stat.label}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+
+</section>
+      
 
       {/* SECTION 1 — PROBLEM-SOLUTION SECTION */}
       <section className="relative py-[120px] bg-white overflow-hidden">
