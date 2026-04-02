@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!--
+    Single-page website — one canonical URL.
+    Section anchors (#overview, #floor-plans, etc.) are not separate URLs
+    and should NOT be listed as separate entries; Google resolves them to the
+    same page. Keep this file pointing at the root only.
+  -->
+
+  <url>
+    <loc>https://corridorsireo.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>

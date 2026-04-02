@@ -1,0 +1,22 @@
+# robots.txt — corridorsireo.com
+# Generated for a single-page React site (Vite + Tailwind)
+
+User-agent: *
+Allow: /
+
+# Block build artifacts and source that should never be indexed
+Disallow: /src/
+Disallow: /*.map$
+
+# Block PDF assets from being indexed as standalone pages
+# (They can still be linked to; this just prevents them appearing
+#  as independent search results separate from the main page.)
+Disallow: /Ireo-corrodor-broucher.pdf
+Disallow: /Ireo-corridors-Master-plan.pdf
+Disallow: /ireo-2bhk-floor-plan.pdf
+Disallow: /ireo-2bhk-study-floor-plan.pdf
+Disallow: /ireo-3bhk-floor-plan.pdf
+Disallow: /ireo-3bhk-servant-floor-plan.pdf
+
+# Sitemap location
+Sitemap: https://corridorsireo.com/sitemap.xml
